@@ -1,0 +1,14 @@
+src/Boots/bin/*
+src/Boots/obj/*
+src/Boots.Library/bin/*
+src/Boots.Library/obj/*
+*.csproj.vspscc
+*.csproj.user
+*.vssscc
+*.log
+obj
+*.proj
+*.suo
+*.sln.cache
+*.vshost.exe
+*.vshost.exe.manifest
