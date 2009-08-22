@@ -8,7 +8,7 @@
     <ProjectGuid>{EED57336-E25D-4247-9401-8F663BE3C3C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Boots</RootNamespace>
+    <RootNamespace>Boots.Library</RootNamespace>
     <AssemblyName>Boots.Library</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,6 +35,8 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -45,13 +47,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boots.cs" />
+    <Compile Include="Canvas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Canvas.Designer.cs">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\Helpers\FontStyleTagParser.cs" />
+    <Compile Include="Elements\Helpers\TextFontStylePair.cs" />
+    <Compile Include="Elements\Helpers\TextLayoutEngine.cs" />
+    <Compile Include="Elements\Para.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\Para.designer.cs">
+      <DependentUpon>Para.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ContainerLayoutHelper.cs" />
+    <Compile Include="Interfaces\IBootsContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slots\Flow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Slots\Flow.designer.cs">
+      <DependentUpon>Flow.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Elements\Helpers\" />
+    <EmbeddedResource Include="Canvas.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Events\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Slots\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
