@@ -18,7 +18,7 @@ namespace TestForm
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			this.para1.Text = "<strong>Hello!</strong>";
+			this.para1.Text = "Hello!";
 			this.para1.Text = this.para1.Text + "World! \\nIt is on!";
 		}
 	}
