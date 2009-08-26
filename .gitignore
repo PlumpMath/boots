@@ -2,6 +2,8 @@ src/Boots/bin/*
 src/Boots/obj/*
 src/Boots.Library/bin/*
 src/Boots.Library/obj/*
+src/Boots.Library.Test/bin/*
+src/Boots.Library.Test/obj/*
 src/TestForm/bin/*
 src/TestForm/obj/*
 *.csproj.vspscc
