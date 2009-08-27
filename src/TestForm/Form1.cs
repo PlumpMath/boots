@@ -18,8 +18,12 @@ namespace TestForm
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			//this.para1.Text = "<strong><em>Hello!</em></strong>";
 			this.para1.Text = "Hello!";
 			this.para1.Text = this.para1.Text + "World! \\nIt is on!";
+			this.para1.Text = this.para1.Text + "\\nand on\\nand on\\n<strong>and on!</strong>";
+
+			this.label1.Text = this.para1.Height.ToString();
 		}
 	}
 }

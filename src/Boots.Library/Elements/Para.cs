@@ -36,7 +36,7 @@ namespace Boots.Library.Elements
 				IList<TextFontStylePair> pairs = new FontStyleTagParser().Parse(this.Text);
 				TextLayoutEngine layout = new TextLayoutEngine(pairs, pe.Graphics, Font, new SolidBrush(ForeColor), this.Width, 0);
 				layout.Layout();
-				UpdateSize();
+				UpdateSize(layout.NumberOfLines);
 			}
 			else
 			{
@@ -57,6 +57,15 @@ namespace Boots.Library.Elements
 				SizeF size = g.MeasureString(this.Text, this.Font, this.Width);
 				this.Height = (int)Math.Ceiling(size.Height);
 			}
+		}
+
+		private void UpdateSize(int rows)
+		{
+			//using (Graphics g = this.CreateGraphics())
+			//{
+				//SizeF size = g.MeasureString(this.Text, this.Font, this.Width);
+				this.Height = rows * this.Font.Height;
+			//}
 		}
 	}
 }

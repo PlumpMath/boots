@@ -16,6 +16,12 @@ namespace Boots.Library.Elements.Helpers
 		private IList<DrawStringInfo> text_to_paint;
 		private int margin;
 		private int width;
+		private int new_line_counter = 1;
+
+		public int NumberOfLines
+		{
+			get { return this.new_line_counter; }
+		}
 
 		public TextLayoutEngine()//IList<TextFontStylePair> textFontStylePairs, Graphics graphics, Font font)
 		{
@@ -46,16 +52,23 @@ namespace Boots.Library.Elements.Helpers
 			}
 
 			Prepare_To_Paint_TokenContainer(containers);
+			
+			var last_location_Y_value = 0.0;
 
 			foreach (DrawStringInfo info in text_to_paint)
 			{
 				using (Font the_font = new Font(font, info.Style))
 				{
-					if (info.StartingPoint.X > 0)
+					//if (info.StartingPoint.X > 0)
+					//{
+					//    string space = " ";
+					//    SizeF space_size = graphics.MeasureString(space, the_font);
+					//    //info.StartingPoint = new PointF(info.StartingPoint.X - space_size.Width, info.StartingPoint.Y);
+					//}
+					if (info.StartingPoint.Y > last_location_Y_value)
 					{
-						string space = " ";
-						SizeF space_size = graphics.MeasureString(space, the_font);
-						//info.StartingPoint = new PointF(info.StartingPoint.X - space_size.Width, info.StartingPoint.Y);
+						this.new_line_counter++;
+						last_location_Y_value = info.StartingPoint.Y;
 					}
 					graphics.DrawString(info.Text, the_font, brush, info.StartingPoint);
 				}

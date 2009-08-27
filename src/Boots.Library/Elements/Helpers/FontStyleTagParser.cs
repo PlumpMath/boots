@@ -88,7 +88,7 @@ namespace Boots.Library.Elements.Helpers
 			return index;
 		}
 
-		private FontStyle determineNextStyleFromCapture(Capture capture)//, FontStyle currentStyle)//, FontStyle previousStyle)
+		private FontStyle determineNextStyleFromCapture(Capture capture)
 		{
 			FontStyle newStyle = FontStyle.Regular;
 			if (this.styles.Count > 0)
@@ -128,11 +128,6 @@ namespace Boots.Library.Elements.Helpers
 					break;
 			}
 			return newStyle;
-		}
-
-		private FontStyle addStyle(FontStyle currentStyle, FontStyle newStyle)
-		{
-			return currentStyle | newStyle;
 		}
 	}
 }

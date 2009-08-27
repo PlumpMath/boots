@@ -29,32 +29,45 @@
 		private void InitializeComponent()
 		{
 			this.para1 = new Boots.Library.Elements.Para();
+			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// para1
 			// 
+			this.para1.BackColor = System.Drawing.Color.MistyRose;
 			this.para1.Location = new System.Drawing.Point(39, 41);
 			this.para1.Name = "para1";
 			this.para1.Size = new System.Drawing.Size(148, 14);
 			this.para1.TabIndex = 0;
 			this.para1.Text = "para1";
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(42, 176);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(0, 13);
+			this.label1.TabIndex = 1;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 264);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.para1);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private Boots.Library.Elements.Para para1;
+		private System.Windows.Forms.Label label1;
 	}
 }
 
