@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Boots.Library
 {
-	public class Boots
+	public class WorkBoots
 	{
 		public static void Setup()
 		{

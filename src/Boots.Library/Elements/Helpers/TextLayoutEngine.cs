@@ -59,12 +59,6 @@ namespace Boots.Library.Elements.Helpers
 			{
 				using (Font the_font = new Font(font, info.Style))
 				{
-					//if (info.StartingPoint.X > 0)
-					//{
-					//    string space = " ";
-					//    SizeF space_size = graphics.MeasureString(space, the_font);
-					//    //info.StartingPoint = new PointF(info.StartingPoint.X - space_size.Width, info.StartingPoint.Y);
-					//}
 					if (info.StartingPoint.Y > last_location_Y_value)
 					{
 						this.new_line_counter++;

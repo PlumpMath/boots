@@ -61,11 +61,7 @@ namespace Boots.Library.Elements
 
 		private void UpdateSize(int rows)
 		{
-			//using (Graphics g = this.CreateGraphics())
-			//{
-				//SizeF size = g.MeasureString(this.Text, this.Font, this.Width);
-				this.Height = rows * this.Font.Height;
-			//}
+			this.Height = rows * this.Font.Height;
 		}
 	}
 }

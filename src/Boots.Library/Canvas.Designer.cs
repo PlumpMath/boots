@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.verticalScrollBar = new System.Windows.Forms.VScrollBar();
+			this.canvasFlow = new Boots.Library.Slots.Flow();
 			this.SuspendLayout();
 			// 
 			// verticalScrollBar
@@ -39,12 +40,21 @@
 			this.verticalScrollBar.Size = new System.Drawing.Size(17, 264);
 			this.verticalScrollBar.TabIndex = 0;
 			// 
+			// canvasFlow
+			// 
+			this.canvasFlow.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.canvasFlow.Location = new System.Drawing.Point(0, 0);
+			this.canvasFlow.Name = "canvasFlow";
+			this.canvasFlow.Size = new System.Drawing.Size(267, 264);
+			this.canvasFlow.TabIndex = 1;
+			// 
 			// Canvas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Window;
 			this.ClientSize = new System.Drawing.Size(284, 264);
+			this.Controls.Add(this.canvasFlow);
 			this.Controls.Add(this.verticalScrollBar);
 			this.Name = "Canvas";
 			this.Text = "Boots";
@@ -55,5 +65,6 @@
 		#endregion
 
 		private System.Windows.Forms.VScrollBar verticalScrollBar;
+		private global::Boots.Library.Slots.Flow canvasFlow;
 	}
 }

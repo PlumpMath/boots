@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Boots.Library.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Boots.Library.Slots
 {
-	public partial class Flow : FlowLayoutPanel
+	public partial class Flow : FlowLayoutPanel, IFlow
 	{
 		public Flow()
 		{
@@ -19,6 +20,11 @@ namespace Boots.Library.Slots
 		protected override void OnPaint(PaintEventArgs pe)
 		{
 			base.OnPaint(pe);
+		}
+
+		public void AddControl(Control control)
+		{
+			this.Controls.Add(control);
 		}
 	}
 }

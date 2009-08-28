@@ -21,7 +21,6 @@ namespace Boots.Library.Helpers
 				var lastControl = container.Controls[container.Controls.Count - 1];
 				return new Point(lastControl.Location.X, lastControl.Location.Y + lastControl.Height);
 			}
-			
 		}
 	}
 }

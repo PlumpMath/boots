@@ -25,5 +25,12 @@ namespace TestForm
 
 			this.label1.Text = this.para1.Height.ToString();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			var p = new Boots.Library.Elements.Para();
+			p.Text = "yeah";
+			this.flow1.AddControl(p);
+		}
 	}
 }

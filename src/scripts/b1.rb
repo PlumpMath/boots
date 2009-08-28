@@ -21,24 +21,42 @@ require 'C:\Dev\Projects\Boots\src\Boots.Library\bin\Debug\Boots.Library.dll'
 class Sneakers
 	class << self
 		def app(&script)
-			Boots::Library::Boots.setup
+			Boots::Library::WorkBoots.setup
 			@@canvas = Boots::Library::Canvas.new
 			self.new.instance_eval(&script)
-			Boots::Library::Boots.run @@canvas
+			Boots::Library::WorkBoots.run @@canvas
 		end
 	end
 	
-	def label(text)
+	def para(text)
 		new_label = Boots::Library::Elements::Para.new
 		new_label.text = text
-		@@canvas.AddControl new_label
+		@@canvas.add_control new_label
 		new_label
+	end
+	
+	def button(text, &event)
+		new_button = Boots::Library::Elements::Button.new
+		new_button.text = text
+		new_button.click do
+			event.call()
+		end
+		@@canvas.add_control new_button
+		
+		new_button
+	end
+	
+	def stack(&script)
 	end
 end
 
 
 Sneakers.app do
-	@p = self.label "Hello!"
-	@p.text = @p.text + " World! \n It is on!	"
+	@p = self.para "Hello!"
+	@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
+	
+	button "Push me" do
+		para "yeah"
+	end
 end
 
