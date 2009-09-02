@@ -1,4 +1,5 @@
 ﻿using Boots.Library.Interfaces;
+using Boots.Library.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +11,14 @@ using System.Windows.Forms;
 
 namespace Boots.Library.Slots
 {
-	public partial class Flow : FlowLayoutPanel, IFlow
+	public partial class Flow : FlowLayoutPanel, IFlow, IBootsContainer
 	{
 		public Flow()
+		{
+			InitializeComponent();
+		}
+
+		public Flow(IDictionary<object, object> styles)
 		{
 			InitializeComponent();
 		}

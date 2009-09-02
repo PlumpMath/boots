@@ -35,18 +35,20 @@ class Sneakers
 		new_label
 	end
 	
-	def button(text, &event)
-		new_button = Boots::Library::Elements::Button.new
+	def button(text, *args, &event)
+		new_button = Boots::Library::Elements::Button.new *args
 		new_button.text = text
 		new_button.click do
 			event.call()
 		end
 		@@canvas.add_control new_button
-		
 		new_button
 	end
 	
 	def stack(&script)
+		new_stack = Boots::Library::Slots::Stack.new
+		new_stack.
+		new_stack
 	end
 end
 
@@ -55,7 +57,7 @@ Sneakers.app do
 	@p = self.para "Hello!"
 	@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
 	
-	button "Push me" do
+	button "Push me", :width => 0.5 do
 		para "yeah"
 	end
 end

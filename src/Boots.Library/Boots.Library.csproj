@@ -69,7 +69,7 @@
     <Compile Include="Elements\Para.designer.cs">
       <DependentUpon>Para.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ContainerLayoutHelper.cs" />
+    <Compile Include="Helpers\StyleHelper.cs" />
     <Compile Include="Interfaces\IBootsContainer.cs" />
     <Compile Include="Interfaces\IFlow.cs" />
     <Compile Include="Interfaces\IStack.cs" />
@@ -80,6 +80,13 @@
     <Compile Include="Slots\Flow.designer.cs">
       <DependentUpon>Flow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Slots\Stack.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Slots\Stack.Designer.cs">
+      <DependentUpon>Stack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\Width.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Canvas.resx">

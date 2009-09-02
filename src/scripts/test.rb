@@ -7,12 +7,12 @@ class Sneakers
 		end
 	end
 	
-	def label(text)
+	def label(text, *args)
 		@@canvas = @@canvas + text
 		puts @@canvas
 	end
 end
 
 Sneakers.app do
-	label "World!"
+	label "World!", :width => 0.5, :height => 0.5
 end
