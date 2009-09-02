@@ -25,7 +25,12 @@ namespace Boots.Library.Helpers
 			{
 				if (pair.Key.ToString() == Boots.Library.Styles.Width.Key)
 				{
-					Control.Width = Width.SetWidth(pair.Value.ToString(), Control.Parent.Width);
+					Control.Width = Width.Set(pair.Value.ToString(), Control.Parent.Width);
+				}
+
+				if (pair.Key.ToString() == Boots.Library.Styles.Height.Key)
+				{
+					Control.Width = Height.Set(pair.Value.ToString(), Control.Parent.Height);
 				}
 			}
 		}

@@ -9,7 +9,7 @@ namespace Boots.Library.Styles
 	{
 		public const string Key = "width";
 
-		public static int SetWidth(string value, int containerWidth)
+		public static int Set(string value, int containerWidth)
 		{
 			float width;
 			if (float.TryParse(value, out width))
