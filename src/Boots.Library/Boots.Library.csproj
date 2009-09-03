@@ -86,6 +86,7 @@
     <Compile Include="Slots\Stack.Designer.cs">
       <DependentUpon>Stack.cs</DependentUpon>
     </Compile>
+    <Compile Include="Styles\Background.cs" />
     <Compile Include="Styles\Height.cs" />
     <Compile Include="Styles\Width.cs" />
   </ItemGroup>

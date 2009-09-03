@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test_font_style_tag_parser.cs" />
+    <Compile Include="Test_styles.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Boots.Library\Boots.Library.csproj">

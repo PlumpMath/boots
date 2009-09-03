@@ -22,16 +22,18 @@ class Sneakers
 	class << self
 		def app(&script)
 			Boots::Library::WorkBoots.setup
-			@@canvas = Boots::Library::Canvas.new
+			canvas = Boots::Library::Canvas.new
+			@@current_container = Array.new
+			@@current_container.push canvas
 			self.new.instance_eval(&script)
-			Boots::Library::WorkBoots.run @@canvas
+			Boots::Library::WorkBoots.run canvas
 		end
 	end
 	
 	def para(text)
 		new_label = Boots::Library::Elements::Para.new
 		new_label.text = text
-		@@canvas.add_control new_label
+		@@current_container.last.add_control new_label
 		new_label
 	end
 	
@@ -41,22 +43,26 @@ class Sneakers
 		new_button.click do
 			event.call()
 		end
-		@@canvas.add_control new_button
+		@@current_container.last.add_control new_button
 		new_button
 	end
 	
-	def stack(&script)
-		new_stack = Boots::Library::Slots::Stack.new
-		new_stack.
+	def stack(*args, &script)
+		new_stack = Boots::Library::Slots::Stack.new *args
+		@@current_container.last.add_control new_stack
+		@@current_container.push new_stack
+		self.instance_eval &script
+		@@current_container.pop
 		new_stack
 	end
 end
 
 
 Sneakers.app do
-	@p = self.para "Hello!"
-	@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
-	
+	stack :background => "mistyrose" do
+		@p = self.para "Hello!"
+		@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
+	end
 	button "Push me", :width => 0.5 do
 		para "yeah"
 	end

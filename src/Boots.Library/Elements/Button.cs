@@ -12,6 +12,8 @@ namespace Boots.Library.Elements
 {
 	public partial class Button : System.Windows.Forms.Button
 	{
+		protected IDictionary<object, object> Styles { get; private set; }
+
 		public Button()
 		{
 			InitializeComponent();
@@ -22,8 +24,6 @@ namespace Boots.Library.Elements
 			this.Styles = styles;
 			InitializeComponent();
 		}
-
-		protected IDictionary<object, object> Styles { get; private set; }
 
 		protected override void OnPaint(PaintEventArgs pe)
 		{

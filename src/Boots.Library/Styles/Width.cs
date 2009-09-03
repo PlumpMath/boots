@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Boots.Library.Styles
 {
@@ -9,18 +10,20 @@ namespace Boots.Library.Styles
 	{
 		public const string Key = "width";
 
-		public static int Set(string value, int containerWidth)
+		public static void Set(string value, Control control)
 		{
 			float width;
 			if (float.TryParse(value, out width))
 			{
-				if (width < 1.0)
+				if (width <= 1.0)
 				{
-					return (int)Math.Floor(containerWidth * width);
+					control.Width = (int)Math.Floor(control.Parent.Width * width);
 				}
-				return (int)Math.Floor(width);
+				else
+				{
+					control.Width = (int)Math.Floor(width);
+				}
 			}
-			return 100;
 		}
 	}
 }

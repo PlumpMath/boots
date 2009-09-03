@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Boots.Library.Styles
 {
@@ -9,18 +10,20 @@ namespace Boots.Library.Styles
 	{
 		public const string Key = "height";
 
-		public static int Set(string value, int containerHeight)
+		public static void Set(string value, Control control)
 		{
 			float height;
 			if (float.TryParse(value, out height))
 			{
 				if (height < 1.0)
 				{
-					return (int)Math.Floor(containerHeight * height);
+					control.Height = (int)Math.Floor(control.Parent.Height * height);
 				}
-				return (int)Math.Floor(height);
+				else
+				{
+					control.Height = (int)Math.Floor(height);
+				}
 			}
-			return 100;
 		}
 	}
 }

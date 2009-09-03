@@ -25,12 +25,17 @@ namespace Boots.Library.Helpers
 			{
 				if (pair.Key.ToString() == Boots.Library.Styles.Width.Key)
 				{
-					Control.Width = Width.Set(pair.Value.ToString(), Control.Parent.Width);
+					Width.Set(pair.Value.ToString(), Control);
 				}
 
 				if (pair.Key.ToString() == Boots.Library.Styles.Height.Key)
 				{
-					Control.Width = Height.Set(pair.Value.ToString(), Control.Parent.Height);
+					Height.Set(pair.Value.ToString(), Control);
+				}
+
+				if (pair.Key.ToString() == Boots.Library.Styles.Background.Key)
+				{
+					Background.Set(pair.Value.ToString(), Control);
 				}
 			}
 		}
