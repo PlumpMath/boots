@@ -15,11 +15,13 @@ namespace Boots.Library.Slots
 	{
 		public Flow()
 		{
+			this.FlowDirection = FlowDirection.LeftToRight;
 			InitializeComponent();
 		}
 
 		public Flow(IDictionary<object, object> styles)
 		{
+			this.FlowDirection = FlowDirection.LeftToRight;
 			InitializeComponent();
 		}
 

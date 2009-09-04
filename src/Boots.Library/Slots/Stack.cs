@@ -17,11 +17,13 @@ namespace Boots.Library.Slots
 
 		public Stack()
 		{
+			this.FlowDirection = FlowDirection.TopDown;
 			InitializeComponent();
 		}
 
 		public Stack(IDictionary<object, object> styles)
 		{
+			this.FlowDirection = FlowDirection.TopDown;
 			this.Styles = styles;
 			InitializeComponent();
 		}

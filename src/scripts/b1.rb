@@ -62,9 +62,10 @@ Sneakers.app do
 	stack :background => "mistyrose" do
 		@p = self.para "Hello!"
 		@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
-	end
-	button "Push me", :width => 0.5 do
-		para "yeah"
+	
+		button "Push me", :width => 0.5 do
+			para "yeah"
+		end
 	end
 end
 
