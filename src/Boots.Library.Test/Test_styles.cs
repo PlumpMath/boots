@@ -1,4 +1,4 @@
-﻿using Boots.Library.Styles;
+﻿using StealToeBoots.Library.Styles;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace Boots.Library.Test
+namespace StealToeBoots.Library.Test
 {
 	[TestFixture]
 	public class Test_styles

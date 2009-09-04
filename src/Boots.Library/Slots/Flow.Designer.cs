@@ -1,4 +1,4 @@
-﻿namespace Boots.Library.Slots
+﻿namespace StealToeBoots.Library.Slots
 {
 	partial class Flow
 	{

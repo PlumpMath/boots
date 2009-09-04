@@ -1,4 +1,4 @@
-﻿namespace Boots.Library.Elements
+﻿namespace StealToeBoots.Library.Elements
 {
 	partial class Button
 	{

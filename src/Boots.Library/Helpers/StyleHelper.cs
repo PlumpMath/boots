@@ -1,12 +1,12 @@
-﻿using Boots.Library.Interfaces;
-using Boots.Library.Styles;
+﻿using StealToeBoots.Library.Interfaces;
+using StealToeBoots.Library.Styles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Boots.Library.Helpers
+namespace StealToeBoots.Library.Helpers
 {
 	public class StyleHelper
 	{
@@ -23,17 +23,17 @@ namespace Boots.Library.Helpers
 		{
 			foreach (var pair in Styles)
 			{
-				if (pair.Key.ToString() == Boots.Library.Styles.Width.Key)
+				if (pair.Key.ToString() == StealToeBoots.Library.Styles.Width.Key)
 				{
 					Width.Set(pair.Value.ToString(), Control);
 				}
 
-				if (pair.Key.ToString() == Boots.Library.Styles.Height.Key)
+				if (pair.Key.ToString() == StealToeBoots.Library.Styles.Height.Key)
 				{
 					Height.Set(pair.Value.ToString(), Control);
 				}
 
-				if (pair.Key.ToString() == Boots.Library.Styles.Background.Key)
+				if (pair.Key.ToString() == StealToeBoots.Library.Styles.Background.Key)
 				{
 					Background.Set(pair.Value.ToString(), Control);
 				}

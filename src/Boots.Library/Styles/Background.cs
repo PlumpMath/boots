@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Boots.Library.Styles
+namespace StealToeBoots.Library.Styles
 {
 	static class Background
 	{

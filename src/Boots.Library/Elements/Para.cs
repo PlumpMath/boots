@@ -1,4 +1,4 @@
-﻿using Boots.Library.Elements.Helpers;
+﻿using StealToeBoots.Library.Elements.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Boots.Library.Elements
+namespace StealToeBoots.Library.Elements
 {
 	public partial class Para : Label
 	{

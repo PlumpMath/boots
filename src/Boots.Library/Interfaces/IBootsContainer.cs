@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Boots.Library.Interfaces
+namespace StealToeBoots.Library.Interfaces
 {
 	public interface IBootsContainer
 	{

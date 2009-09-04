@@ -8,7 +8,7 @@
     <ProjectGuid>{B55F4E0C-906F-44A5-9B12-4E22E1893552}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Boots</RootNamespace>
+    <RootNamespace>StealToeBoots</RootNamespace>
     <AssemblyName>Boots</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

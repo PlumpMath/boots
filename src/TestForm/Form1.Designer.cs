@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.label1 = new System.Windows.Forms.Label();
-			this.para1 = new Boots.Library.Elements.Para();
-			this.flow1 = new Boots.Library.Slots.Flow();
-			this.button1 = new Boots.Library.Elements.Button();
+			this.para1 = new StealToeBoots.Library.Elements.Para();
+			this.flow1 = new StealToeBoots.Library.Slots.Flow();
+			this.button1 = new StealToeBoots.Library.Elements.Button();
 			this.flow1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -90,10 +90,10 @@
 
 		#endregion
 
-		private Boots.Library.Elements.Para para1;
+		private StealToeBoots.Library.Elements.Para para1;
 		private System.Windows.Forms.Label label1;
-		private Boots.Library.Slots.Flow flow1;
-		private Boots.Library.Elements.Button button1;
+		private StealToeBoots.Library.Slots.Flow flow1;
+		private StealToeBoots.Library.Elements.Button button1;
 	}
 }
 

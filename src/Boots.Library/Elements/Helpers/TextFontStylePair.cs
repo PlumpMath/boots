@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 
-namespace Boots.Library.Elements.Helpers
+namespace StealToeBoots.Library.Elements.Helpers
 {
 	public class TextFontStylePair
 	{

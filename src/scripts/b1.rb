@@ -18,27 +18,27 @@ require 'C:\Dev\Projects\Boots\src\Boots.Library\bin\Debug\Boots.Library.dll'
 
 
 
-class Sneakers
+class Boots
 	class << self
 		def app(&script)
-			Boots::Library::WorkBoots.setup
-			canvas = Boots::Library::Canvas.new
+			StealToeBoots::Library::WorkBoots.setup
+			canvas = StealToeBoots::Library::Canvas.new
 			@@current_container = Array.new
 			@@current_container.push canvas
 			self.new.instance_eval(&script)
-			Boots::Library::WorkBoots.run canvas
+			StealToeBoots::Library::WorkBoots.run canvas
 		end
 	end
 	
 	def para(text)
-		new_label = Boots::Library::Elements::Para.new
+		new_label = StealToeBoots::Library::Elements::Para.new
 		new_label.text = text
 		@@current_container.last.add_control new_label
 		new_label
 	end
 	
 	def button(text, *args, &event)
-		new_button = Boots::Library::Elements::Button.new *args
+		new_button = StealToeBoots::Library::Elements::Button.new *args
 		new_button.text = text
 		new_button.click do
 			event.call()
@@ -48,7 +48,7 @@ class Sneakers
 	end
 	
 	def stack(*args, &script)
-		new_stack = Boots::Library::Slots::Stack.new *args
+		new_stack = StealToeBoots::Library::Slots::Stack.new *args
 		@@current_container.last.add_control new_stack
 		@@current_container.push new_stack
 		self.instance_eval &script
@@ -58,7 +58,7 @@ class Sneakers
 end
 
 
-Sneakers.app do
+Boots.app do
 	stack :background => "mistyrose" do
 		@p = self.para "Hello!"
 		@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."

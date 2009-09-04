@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Boots.Library.Interfaces
+namespace StealToeBoots.Library.Interfaces
 {
 	public interface IStack : IBootsContainer
 	{
