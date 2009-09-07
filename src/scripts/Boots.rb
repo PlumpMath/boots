@@ -47,4 +47,20 @@ class Boots
 	def ask(message)
 		SteelToeBoots::Library::Builtins::Dialogs::Ask.show message
 	end
+	
+	def del(text)
+		"<del>" + text + "</del>"
+	end
+	
+	def em(text)
+		"<em>" + text + "</em>"
+	end
+	
+	def ins(text)
+		"<em>" + text + "</em>"
+	end
+	
+	def strong(text)
+		"<strong>" + text + "</strong>"
+	end
 end

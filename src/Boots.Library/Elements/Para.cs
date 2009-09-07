@@ -36,18 +36,13 @@ namespace SteelToeBoots.Library.Elements
 				IList<TextFontStylePair> pairs = new FontStyleTagParser().Parse(this.Text);
 				TextLayoutEngine layout = new TextLayoutEngine(pairs, pe.Graphics, Font, new SolidBrush(ForeColor), this.Width, 0);
 				layout.Layout();
-				UpdateSize(layout.NumberOfLines);
+				UpdateHeight(layout.NumberOfLines);
+				UpdateWidth(layout.NumberOfLines, pe.Graphics);
 			}
 			else
 			{
 				base.OnPaint(pe);
 			}
-		}
-
-		protected override void OnTextChanged(EventArgs e)
-		{
-			UpdateSize();
-			base.OnTextChanged(e);
 		}
 
 		private void UpdateSize()
@@ -59,9 +54,18 @@ namespace SteelToeBoots.Library.Elements
 			}
 		}
 
-		private void UpdateSize(int rows)
+		private void UpdateHeight(int rows)
 		{
 			this.Height = rows * this.Font.Height;
+		}
+
+		private void UpdateWidth(int rows, Graphics g)
+		{
+			if (rows == 1)
+			{
+				SizeF size = g.MeasureString(this.Text, this.Font, this.Width);
+				this.Width = (int)Math.Ceiling(size.Width);
+			}
 		}
 	}
 }

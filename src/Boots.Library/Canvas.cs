@@ -16,13 +16,11 @@ namespace SteelToeBoots.Library
 		public Canvas()
 		{
 			InitializeComponent();
+			this.verticalScrollBar.Visible = false;
 		}
 
 		public void AddControl(Control control)
 		{
-			//control.Location = this.NextPosition();
-			//System.Diagnostics.Debug.WriteLine(string.Format("Top {0}, Left {1}", control.Location.Y, control.Location.X));
-			//this.Controls.Add(control);
 			this.canvasFlow.AddControl(control);
 		}
 	}

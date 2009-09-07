@@ -14,9 +14,12 @@ namespace SteelToeBoots.Library.Builtins.Dialogs
 		{
 			string answer = string.Empty;
 
-			using (Form ask = new Form())
+			using (var ask = new Form())
 			{
-				var stack = new Stack();
+				var stack_styles = new Dictionary<object, object>();
+				stack_styles.Add("background", "mistyrose");
+				stack_styles.Add("width", "1.0");
+				var stack = new Stack(stack_styles);
 				var para = new Para();
 				para.Text = message;
 				stack.AddControl(para);
@@ -24,15 +27,32 @@ namespace SteelToeBoots.Library.Builtins.Dialogs
 				var edit_box = new TextBox();
 				stack.AddControl(edit_box);
 
+				var flow_styles = new Dictionary<object, object>();
+				flow_styles.Add("background", "gray");
+				flow_styles.Add("width", "0.9");
+				var flow = new Flow(flow_styles);
+				flow.FlowDirection = FlowDirection.RightToLeft;
+
 				var button_ok = new SteelToeBoots.Library.Elements.Button();
 				button_ok.Text = "OK";
 				button_ok.Click += (object o, EventArgs e) => {
 					answer = edit_box.Text;
 					ask.Close();
 				};
-				stack.AddControl(button_ok);
+				flow.AddControl(button_ok);
+
+				var button_canel = new SteelToeBoots.Library.Elements.Button();
+				button_canel.Text = "Cancel";
+				button_canel.Click += (object o, EventArgs e) => {
+					answer = string.Empty;
+					ask.Close();
+				};
+				flow.AddControl(button_canel);
+
+				stack.AddControl(flow);
 
 				ask.Text = "Boots ask:";
+				//ask.AddControl(stack);
 				ask.Controls.Add(stack);
 
 				ask.ShowDialog();
