@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Styles
 {
-	static class Background
+	public static class Background
 	{
 		public const string Key = "background";
 

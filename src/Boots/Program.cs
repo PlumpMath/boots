@@ -25,6 +25,7 @@ namespace SteelToeBoots
 			});
 			if (args.Length == 1)
 			{
+				engine.RequireRubyFile("C:\\Dev\\Projects\\Boots\\src\\scripts\\Boots.rb");
 				engine.RequireRubyFile(args[0]);
 			}
 		}

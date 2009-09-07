@@ -1,29 +1,50 @@
-﻿require 'mscorlib'
-require 'PresentationFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
-require 'PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+﻿require 'mscorlib' 
+require 'System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 
+require 'C:\Dev\Projects\Boots\src\Boots.Library\bin\Debug\Boots.Library.dll'
 
-Window = System::Windows::Window
-Application = System::Windows::Application
-Button = System::Windows::Controls::Button
-
-win = Window.new
-win.title = 'IronRuby and WPF Interop'
-
-mainButton = Button.new
-mainButton.content = 'I am a WPF button — press me'
-
-mainButton.click do |sender, args|
-  System::Windows::MessageBox.Show("Created using IronRuby!")
+class Boots
+	class << self
+		def app(&script)
+			SteelToeBoots::Library::WorkBoots.setup
+			canvas = SteelToeBoots::Library::Canvas.new
+			@@current_container = Array.new
+			@@current_container.push canvas
+			self.new.instance_eval(&script)
+			SteelToeBoots::Library::WorkBoots.run canvas
+		end
+	end
+	
+	def para(text)
+		new_label = SteelToeBoots::Library::Elements::Para.new
+		new_label.text = text
+		@@current_container.last.add_control new_label
+		new_label
+	end
+	
+	def button(text, *args, &event)
+		new_button = SteelToeBoots::Library::Elements::Button.new *args
+		new_button.text = text
+		new_button.click do
+			event.call()
+		end
+		@@current_container.last.add_control new_button
+		new_button
+	end
+	
+	def stack(*args, &script)
+		new_stack = SteelToeBoots::Library::Slots::Stack.new *args
+		@@current_container.last.add_control new_stack
+		@@current_container.push new_stack
+		self.instance_eval &script
+		@@current_container.pop
+		new_stack
+	end
+	
+	def alert(message)
+		SteelToeBoots::Library::Builtins::Dialogs::Alert.show message
+	end
+	
+	def ask(message)
+		SteelToeBoots::Library::Builtins::Dialogs::Ask.show message
+	end
 end
-
-win.content = mainButton
-my_app = Application.new
-my_app.run win
-
-#Boots.setup
-#Boots.run
-
-
-#require 'mscorlib' 
-#require 'System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 
-#require 'C:\Dev\Projects\Boots\src\Boots.Library\bin\Debug\Boots.Library.dll'
