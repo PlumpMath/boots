@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace StealToeBoots.Library.Elements.Helpers
+namespace SteelToeBoots.Library.Elements.Helpers
 {
 	public class FontStyleTagParser
 	{

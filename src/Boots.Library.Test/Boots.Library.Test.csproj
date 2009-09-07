@@ -8,7 +8,7 @@
     <ProjectGuid>{F73E1FA3-3143-4B41-A125-DFB76A33DC2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StealToeBoots.Library.Test</RootNamespace>
+    <RootNamespace>SteelToeBoots.Library.Test</RootNamespace>
     <AssemblyName>Boots.Library.Test</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

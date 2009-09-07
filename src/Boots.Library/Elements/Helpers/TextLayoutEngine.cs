@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Elements.Helpers
+namespace SteelToeBoots.Library.Elements.Helpers
 {
 	public class TextLayoutEngine
 	{

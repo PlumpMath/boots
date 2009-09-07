@@ -1,4 +1,4 @@
-﻿using StealToeBoots.Library.Helpers;
+﻿using SteelToeBoots.Library.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Elements
+namespace SteelToeBoots.Library.Elements
 {
 	public partial class Button : System.Windows.Forms.Button
 	{

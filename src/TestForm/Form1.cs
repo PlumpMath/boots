@@ -28,7 +28,7 @@ namespace TestForm
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			var p = new StealToeBoots.Library.Elements.Para();
+			var p = new SteelToeBoots.Library.Elements.Para();
 			p.Text = "yeah";
 			this.flow1.AddControl(p);
 		}

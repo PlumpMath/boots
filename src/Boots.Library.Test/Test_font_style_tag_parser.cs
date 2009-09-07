@@ -1,4 +1,4 @@
-﻿using StealToeBoots.Library.Elements.Helpers;
+﻿using SteelToeBoots.Library.Elements.Helpers;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Test
+namespace SteelToeBoots.Library.Test
 {
 	[TestFixture]
 	public class Test_font_style_tag_parser

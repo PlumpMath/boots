@@ -1,4 +1,4 @@
-﻿namespace StealToeBoots.Library.Elements
+﻿namespace SteelToeBoots.Library.Elements
 {
 	partial class Button
 	{

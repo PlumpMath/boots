@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace StealToeBoots.Library.Interfaces
+namespace SteelToeBoots.Library.Interfaces
 {
 	public interface IFlow : IBootsContainer
 	{

@@ -21,24 +21,24 @@ require 'C:\Dev\Projects\Boots\src\Boots.Library\bin\Debug\Boots.Library.dll'
 class Boots
 	class << self
 		def app(&script)
-			StealToeBoots::Library::WorkBoots.setup
-			canvas = StealToeBoots::Library::Canvas.new
+			SteelToeBoots::Library::WorkBoots.setup
+			canvas = SteelToeBoots::Library::Canvas.new
 			@@current_container = Array.new
 			@@current_container.push canvas
 			self.new.instance_eval(&script)
-			StealToeBoots::Library::WorkBoots.run canvas
+			SteelToeBoots::Library::WorkBoots.run canvas
 		end
 	end
 	
 	def para(text)
-		new_label = StealToeBoots::Library::Elements::Para.new
+		new_label = SteelToeBoots::Library::Elements::Para.new
 		new_label.text = text
 		@@current_container.last.add_control new_label
 		new_label
 	end
 	
 	def button(text, *args, &event)
-		new_button = StealToeBoots::Library::Elements::Button.new *args
+		new_button = SteelToeBoots::Library::Elements::Button.new *args
 		new_button.text = text
 		new_button.click do
 			event.call()
@@ -48,12 +48,20 @@ class Boots
 	end
 	
 	def stack(*args, &script)
-		new_stack = StealToeBoots::Library::Slots::Stack.new *args
+		new_stack = SteelToeBoots::Library::Slots::Stack.new *args
 		@@current_container.last.add_control new_stack
 		@@current_container.push new_stack
 		self.instance_eval &script
 		@@current_container.pop
 		new_stack
+	end
+	
+	def alert(message)
+		SteelToeBoots::Library::Builtins::Dialogs::Alert.show message
+	end
+	
+	def ask(message)
+		SteelToeBoots::Library::Builtins::Dialogs::Ask.show message
 	end
 end
 
@@ -64,7 +72,11 @@ Boots.app do
 		@p.text = @p.text + " World! \\n It is on!	\\nand on and on..."
 	
 		button "Push me", :width => 0.5 do
-			para "yeah"
+			para ask "what"
+		end
+		
+		button "Push me too" do
+			alert "smooth"
 		end
 	end
 end

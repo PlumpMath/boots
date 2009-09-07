@@ -1,4 +1,4 @@
-﻿namespace StealToeBoots.Library
+﻿namespace SteelToeBoots.Library
 {
 	partial class Canvas
 	{
@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.verticalScrollBar = new System.Windows.Forms.VScrollBar();
-			this.canvasFlow = new StealToeBoots.Library.Slots.Flow();
+			this.canvasFlow = new SteelToeBoots.Library.Slots.Flow();
 			this.SuspendLayout();
 			// 
 			// verticalScrollBar
@@ -65,6 +65,6 @@
 		#endregion
 
 		private System.Windows.Forms.VScrollBar verticalScrollBar;
-		private global::StealToeBoots.Library.Slots.Flow canvasFlow;
+		private global::SteelToeBoots.Library.Slots.Flow canvasFlow;
 	}
 }

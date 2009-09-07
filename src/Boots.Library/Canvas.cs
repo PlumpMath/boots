@@ -1,5 +1,5 @@
-﻿using StealToeBoots.Library.Helpers;
-using StealToeBoots.Library.Interfaces;
+﻿using SteelToeBoots.Library.Helpers;
+using SteelToeBoots.Library.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library
+namespace SteelToeBoots.Library
 {
 	public partial class Canvas : Form, IBootsContainer
 	{

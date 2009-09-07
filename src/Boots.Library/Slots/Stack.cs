@@ -1,5 +1,5 @@
-﻿using StealToeBoots.Library.Helpers;
-using StealToeBoots.Library.Interfaces;
+﻿using SteelToeBoots.Library.Helpers;
+using SteelToeBoots.Library.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Slots
+namespace SteelToeBoots.Library.Slots
 {
 	public partial class Stack : FlowLayoutPanel, IStack
 	{
@@ -37,7 +37,7 @@ namespace StealToeBoots.Library.Slots
 		{
 			if (this.Styles != null)
 			{
-				new StyleHelper(this, this.Styles).SetStyles();
+				new ContainerStyleHelper(this, this.Styles).SetStyles();
 			}
 			base.OnParentChanged(e);
 		}

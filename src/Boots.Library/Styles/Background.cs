@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Styles
+namespace SteelToeBoots.Library.Styles
 {
 	static class Background
 	{

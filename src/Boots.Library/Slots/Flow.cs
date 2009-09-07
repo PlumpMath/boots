@@ -1,5 +1,5 @@
-﻿using StealToeBoots.Library.Interfaces;
-using StealToeBoots.Library.Helpers;
+﻿using SteelToeBoots.Library.Interfaces;
+using SteelToeBoots.Library.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StealToeBoots.Library.Slots
+namespace SteelToeBoots.Library.Slots
 {
 	public partial class Flow : FlowLayoutPanel, IFlow, IBootsContainer
 	{
