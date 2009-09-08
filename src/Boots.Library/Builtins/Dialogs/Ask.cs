@@ -18,6 +18,7 @@ namespace SteelToeBoots.Library.Builtins.Dialogs
 			{
 				var stack_styles = new Dictionary<object, object>();
 				stack_styles.Add("background", "mistyrose");
+				stack_styles.Add("heigth", "1.0");
 				stack_styles.Add("width", "1.0");
 				var stack = new Stack(stack_styles);
 				var para = new Para();

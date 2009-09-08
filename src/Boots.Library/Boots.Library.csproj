@@ -62,6 +62,12 @@
     <Compile Include="Elements\Button.Designer.cs">
       <DependentUpon>Button.cs</DependentUpon>
     </Compile>
+    <Compile Include="Elements\Edit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Elements\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Elements\Helpers\FontStyleTagParser.cs" />
     <Compile Include="Elements\Helpers\TextFontStylePair.cs" />
     <Compile Include="Elements\Helpers\TextLayoutEngine.cs" />
@@ -74,6 +80,7 @@
     <Compile Include="Helpers\ContainerStyleHelper.cs" />
     <Compile Include="Helpers\StyleHelper.cs" />
     <Compile Include="Interfaces\IBootsContainer.cs" />
+    <Compile Include="Interfaces\IBootsElement.cs" />
     <Compile Include="Interfaces\IFlow.cs" />
     <Compile Include="Interfaces\IStack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
