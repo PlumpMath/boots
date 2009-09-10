@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Slots
 {
+	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("height", 1.0)]
+	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("width", 1.0)]
 	public partial class Flow : FlowLayoutPanel, IFlow, IBootsContainer
 	{
 		protected IDictionary<object, object> Styles { get; private set; }

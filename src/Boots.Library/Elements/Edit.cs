@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Elements
 {
+	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("width", 0.9)]
 	public partial class Edit : TextBox, IBootsElement 
 	{
 		public Edit()

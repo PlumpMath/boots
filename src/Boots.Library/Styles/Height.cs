@@ -15,7 +15,7 @@ namespace SteelToeBoots.Library.Styles
 			float height;
 			if (float.TryParse(value, out height))
 			{
-				if (height < 1.0)
+				if (height <= 1.0)
 				{
 					control.Height = (int)Math.Floor(control.Parent.Height * height);
 				}
