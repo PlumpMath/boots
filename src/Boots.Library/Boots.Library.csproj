@@ -77,12 +77,13 @@
     <Compile Include="Elements\Para.designer.cs">
       <DependentUpon>Para.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\ContainerStyleHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\StyleHelper.cs" />
     <Compile Include="Interfaces\IBootsContainer.cs" />
     <Compile Include="Interfaces\IBootsElement.cs" />
     <Compile Include="Interfaces\IFlow.cs" />
     <Compile Include="Interfaces\IStack.cs" />
+    <Compile Include="Interfaces\IStyle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Slots\Flow.cs">
       <SubType>Component</SubType>

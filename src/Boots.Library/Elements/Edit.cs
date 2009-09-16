@@ -1,4 +1,5 @@
-﻿using SteelToeBoots.Library.Interfaces;
+﻿using SteelToeBoots.Library.Helpers;
+using SteelToeBoots.Library.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +14,23 @@ namespace SteelToeBoots.Library.Elements
 	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("width", 0.9)]
 	public partial class Edit : TextBox, IBootsElement 
 	{
+		private StyleHelper style_helper;
+
 		public Edit()
 		{
+			this.style_helper = new StyleHelper(this, null);
+			InitializeComponent();
+		}
+
+		public Edit(IDictionary<object, object> styles)
+		{
+			this.style_helper = new StyleHelper(this, styles);
 			InitializeComponent();
 		}
 
 		protected override void OnPaint(PaintEventArgs pe)
 		{
 			base.OnPaint(pe);
-		}
-
-		public Control Control
-		{
-			get { return this; }
 		}
 	}
 }

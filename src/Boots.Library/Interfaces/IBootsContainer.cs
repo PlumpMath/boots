@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Interfaces
 {
-	public interface IBootsContainer
+	public interface IBootsContainer : IBootsElement
 	{
 		Control.ControlCollection Controls { get; }
 

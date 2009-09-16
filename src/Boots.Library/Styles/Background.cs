@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SteelToeBoots.Library.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,11 +8,11 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Styles
 {
-	public static class Background
+	public class Background : IStyle
 	{
 		public const string Key = "background";
 
-		public static void Set(string color, Control control)
+		public void Set(string color, Control control)
 		{
 			var backcolor = Color.FromName(color);
 			if (backcolor.IsKnownColor)

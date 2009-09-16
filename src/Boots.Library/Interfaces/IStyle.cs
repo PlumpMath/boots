@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Interfaces
 {
-	public interface IBootsElement
+	public interface IStyle
 	{
-		
+		void Set(string style, Control control);
 	}
 }

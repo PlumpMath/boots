@@ -16,7 +16,7 @@ namespace SteelToeBoots.Library.Test
 		public void Test_background_is_red()
 		{
 			var control = new Control();
-			Background.Set("red", control);
+			//Background.Set("red", control);
 			Assert.AreEqual(Color.Red, control.BackColor);
 			Assert.IsTrue(control.BackColor.IsKnownColor);
 		}
@@ -25,7 +25,7 @@ namespace SteelToeBoots.Library.Test
 		public void Test_background_is_empty()
 		{
 			var control = new Control();
-			Background.Set("hello", control);
+			//Background.Set("hello", control);
 			var backcolor = Color.FromName("hello");
 			Assert.AreEqual(0, control.BackColor.A);
 			Assert.AreEqual(0, control.BackColor.R);
@@ -39,7 +39,7 @@ namespace SteelToeBoots.Library.Test
 		public void Test_background_is_mistyrose()
 		{
 			var control = new Control();
-			Background.Set("mistyrose", control);
+			//Background.Set("mistyrose", control);
 			Assert.AreEqual(Color.MistyRose, control.BackColor);
 			Assert.IsTrue(control.BackColor.IsKnownColor);
 		}

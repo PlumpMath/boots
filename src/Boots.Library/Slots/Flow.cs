@@ -39,7 +39,7 @@ namespace SteelToeBoots.Library.Slots
 		{
 			if (this.Styles != null)
 			{
-				new ContainerStyleHelper(this, this.Styles).SetStyles();
+				new StyleHelper(this, this.Styles).SetStyles();
 			}
 			base.OnParentChanged(e);
 		}

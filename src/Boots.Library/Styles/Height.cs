@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SteelToeBoots.Library.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,11 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Styles
 {
-	static class Height
+	public class Height : IStyle
 	{
 		public const string Key = "height";
 
-		public static void Set(string value, Control control)
+		public void Set(string value, Control control)
 		{
 			float height;
 			if (float.TryParse(value, out height))
