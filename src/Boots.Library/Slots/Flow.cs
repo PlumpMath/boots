@@ -13,9 +13,10 @@ namespace SteelToeBoots.Library.Slots
 {
 	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("height", 1.0)]
 	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("width", 1.0)]
-	public partial class Flow : FlowLayoutPanel, IFlow, IBootsContainer
+	public partial class Flow : FlowLayoutPanel, IFlow
 	{
-		protected IDictionary<object, object> Styles { get; private set; }
+		public IDictionary<object, object> Styles { get; set; }
+		public IBootsControl BootsControl { get; set; }
 
 		public Flow()
 		{
@@ -35,17 +36,17 @@ namespace SteelToeBoots.Library.Slots
 			base.OnPaint(pe);
 		}
 
-		protected override void OnParentChanged(EventArgs e)
-		{
-			if (this.Styles != null)
-			{
-				new StyleHelper(this, this.Styles).SetStyles();
-			}
-			base.OnParentChanged(e);
-		}
+
 
 		public void AddControl(Control control)
 		{
+			if (control is IBootsElement)
+			{
+				var boots_control = new BootsControl(control);
+				var styles = ((IBootsElement)control).Styles;
+				boots_control.Styles = styles;
+				((IBootsElement)control).BootsControl = boots_control;
+			}
 			this.Controls.Add(control);
 		}
 	}

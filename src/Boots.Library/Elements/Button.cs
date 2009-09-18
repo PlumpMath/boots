@@ -1,4 +1,5 @@
 ﻿using SteelToeBoots.Library.Helpers;
+using SteelToeBoots.Library.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +11,10 @@ using System.Windows.Forms;
 
 namespace SteelToeBoots.Library.Elements
 {
-	public partial class Button : System.Windows.Forms.Button
+	public partial class Button : System.Windows.Forms.Button, IBootsElement
 	{
-		protected IDictionary<object, object> Styles { get; private set; }
+		public IDictionary<object, object> Styles { get; set; }
+		public IBootsControl BootsControl { get; set; }
 
 		public Button()
 		{
@@ -28,15 +30,6 @@ namespace SteelToeBoots.Library.Elements
 		protected override void OnPaint(PaintEventArgs pe)
 		{
 			base.OnPaint(pe);
-		}
-
-		protected override void OnParentChanged(EventArgs e)
-		{
-			if (this.Styles != null)
-			{
-				new StyleHelper(this, this.Styles).SetStyles();
-			}
-			base.OnParentChanged(e);
 		}
 	}
 }

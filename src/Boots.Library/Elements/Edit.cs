@@ -14,17 +14,16 @@ namespace SteelToeBoots.Library.Elements
 	[SteelToeBoots.Library.Styles.Attributes.DefaultStyle("width", 0.9)]
 	public partial class Edit : TextBox, IBootsElement 
 	{
-		private StyleHelper style_helper;
+		public IDictionary<object, object> Styles { get; set; }
+		public IBootsControl BootsControl { get; set; }
 
 		public Edit()
 		{
-			this.style_helper = new StyleHelper(this, null);
 			InitializeComponent();
 		}
 
 		public Edit(IDictionary<object, object> styles)
 		{
-			this.style_helper = new StyleHelper(this, styles);
 			InitializeComponent();
 		}
 

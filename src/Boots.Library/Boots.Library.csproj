@@ -77,6 +77,8 @@
     <Compile Include="Elements\Para.designer.cs">
       <DependentUpon>Para.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BootsControl.cs" />
+    <Compile Include="Interfaces\IBootsControl.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Helpers\StyleHelper.cs" />
     <Compile Include="Interfaces\IBootsContainer.cs" />
@@ -99,6 +101,7 @@
     </Compile>
     <Compile Include="Styles\Attributes\DefaultStyleAttribute.cs" />
     <Compile Include="Styles\Background.cs" />
+    <Compile Include="Styles\Flow_direction.cs" />
     <Compile Include="Styles\Height.cs" />
     <Compile Include="Styles\Width.cs" />
   </ItemGroup>

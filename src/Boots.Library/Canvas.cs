@@ -13,6 +13,9 @@ namespace SteelToeBoots.Library
 {
 	public partial class Canvas : Form, IBootsContainer
 	{
+		public IDictionary<object, object> Styles { get; set; }
+		public IBootsControl BootsControl { get; set; }
+
 		public Canvas()
 		{
 			InitializeComponent();
